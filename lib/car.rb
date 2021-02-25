@@ -12,4 +12,5 @@ class Car
     @year = info[:year]
     @age = (2021 - (info[:year].to_i)).to_s
   end
+
 end

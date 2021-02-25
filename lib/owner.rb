@@ -6,13 +6,12 @@ class Owner
     @name = name
     @occupation = occupation
     @cars = []
+    @car = Car.new(info)
   end
 
   def buy(info)
-    info =
-    make = info.split(" ")[1][:description]
-    @model = info.split(" ")[2][:description]
-    @color = info.split(" ")[0][:decription]
-    Car.new({description: info, year: info.last})
+    data = info.split(" ")
+    hash = {description: data[1..3].to_s, year: data[0]}
+    @cars << Car.new(hash)
   end
 end
