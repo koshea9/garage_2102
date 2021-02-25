@@ -5,11 +5,11 @@ class Car
               :year,
               :age
 
-  def initialize({description:'#{color} #{make} #{model}', year: '#{year}'})
-    @make = 'Ford'
-    @model = 'Mustang'
-    @color = 'Green'
-    @year = '1967'
-    @age = '54'
+  def initialize(info)
+    @make = info[:description].split(" ").to_a[1]
+    @model = info[:description].split(" ").to_a[2]
+    @color = info[:description].split(" ").to_a[0]
+    @year = info[:year]
+    @age = (2021 - (info[:year].to_i)).to_s
   end
 end
