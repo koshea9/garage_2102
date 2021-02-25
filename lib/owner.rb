@@ -6,12 +6,11 @@ class Owner
     @name = name
     @occupation = occupation
     @cars = []
-    @car = Car.new(info)
   end
 
   def buy(info)
     data = info.split(" ")
     hash = {description: data[1..3].to_s, year: data[0]}
-    @cars << Car.new(hash)
+    @cars << @Car.new(hash)
   end
 end
