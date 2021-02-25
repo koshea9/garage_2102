@@ -7,6 +7,7 @@ class CarTest < Minitest::Test
 
   def setup
     @car_1 = Car.new({description: 'Green Ford Mustang', year: '1967'})
+    require "pry"; binding.pry
   end
 
   def test_it_exists
